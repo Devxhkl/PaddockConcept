@@ -13,6 +13,16 @@
 		FA1B770F1A45D71E00407E4F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1B770E1A45D71E00407E4F /* Images.xcassets */; };
 		FA1B77121A45D71E00407E4F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1B77101A45D71E00407E4F /* LaunchScreen.xib */; };
 		FA1B771E1A45D71E00407E4F /* PaddockClubPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1B771D1A45D71E00407E4F /* PaddockClubPadTests.swift */; };
+		FA1B77281A45FBC900407E4F /* ExternalStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1B77271A45FBC900407E4F /* ExternalStoryboard.storyboard */; };
+		FA1B772B1A45FC0400407E4F /* ExternalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1B772A1A45FC0400407E4F /* ExternalViewController.swift */; };
+		FA1B77361A48B4F800407E4F /* TweetFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1B77341A48B4F800407E4F /* TweetFeedCell.swift */; };
+		FA559B201A83177B00FCA76E /* GameTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA559B1F1A83177B00FCA76E /* GameTableCell.swift */; };
+		FA559B271A831A1800FCA76E /* GameTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA559B261A831A1800FCA76E /* GameTable.swift */; };
+		FA5CB25E1A4BD0B800C2C460 /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CB2571A4BD0AD00C2C460 /* SwifteriOS.framework */; };
+		FA5CB25F1A4BD0B800C2C460 /* SwifteriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CB2571A4BD0AD00C2C460 /* SwifteriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA5CB2631A4BD12C00C2C460 /* TweetFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CB2621A4BD12C00C2C460 /* TweetFeed.swift */; };
+		FA6B6E5C1A71F59000F1BB6D /* DriverSelectionBGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B6E5B1A71F59000F1BB6D /* DriverSelectionBGViewController.swift */; };
+		FA6B6E5E1A725AE700F1BB6D /* DriversPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6B6E5D1A725AE700F1BB6D /* DriversPopoverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +33,63 @@
 			remoteGlobalIDString = FA1B77011A45D71E00407E4F;
 			remoteInfo = PaddockClubPad;
 		};
+		FA5CB2541A4BD0AD00C2C460 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA5CB24C1A4BD0AD00C2C460 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B300C1F1944AA1A00993175;
+			remoteInfo = SwifterDemoiOS;
+		};
+		FA5CB2561A4BD0AD00C2C460 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA5CB24C1A4BD0AD00C2C460 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B9F50EE1944A5AB00894629;
+			remoteInfo = SwifteriOS;
+		};
+		FA5CB2581A4BD0AD00C2C460 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA5CB24C1A4BD0AD00C2C460 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B9F51131944A61D00894629;
+			remoteInfo = SwifterMac;
+		};
+		FA5CB25A1A4BD0AD00C2C460 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA5CB24C1A4BD0AD00C2C460 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B300C471944AECB00993175;
+			remoteInfo = SwifterDemoMac;
+		};
+		FA5CB25C1A4BD0AD00C2C460 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA5CB24C1A4BD0AD00C2C460 /* Swifter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8B300C5A1944AECB00993175;
+			remoteInfo = SwifterDemoMacTests;
+		};
+		FA5CB2601A4BD0B800C2C460 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA5CB24C1A4BD0AD00C2C460 /* Swifter.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B9F50ED1944A5AB00894629;
+			remoteInfo = SwifteriOS;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA5CB13B1A4A165200C2C460 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FA5CB25F1A4BD0B800C2C460 /* SwifteriOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FA1B77021A45D71E00407E4F /* PaddockClubPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaddockClubPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +102,15 @@
 		FA1B77171A45D71E00407E4F /* PaddockClubPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaddockClubPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1B771C1A45D71E00407E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA1B771D1A45D71E00407E4F /* PaddockClubPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddockClubPadTests.swift; sourceTree = "<group>"; };
+		FA1B77271A45FBC900407E4F /* ExternalStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ExternalStoryboard.storyboard; sourceTree = "<group>"; };
+		FA1B772A1A45FC0400407E4F /* ExternalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalViewController.swift; sourceTree = "<group>"; };
+		FA1B77341A48B4F800407E4F /* TweetFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetFeedCell.swift; sourceTree = "<group>"; };
+		FA559B1F1A83177B00FCA76E /* GameTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTableCell.swift; sourceTree = "<group>"; };
+		FA559B261A831A1800FCA76E /* GameTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTable.swift; sourceTree = "<group>"; };
+		FA5CB24C1A4BD0AD00C2C460 /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = "../../../../../Downloads/Swifter-master-3/Swifter.xcodeproj"; sourceTree = "<group>"; };
+		FA5CB2621A4BD12C00C2C460 /* TweetFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetFeed.swift; sourceTree = "<group>"; };
+		FA6B6E5B1A71F59000F1BB6D /* DriverSelectionBGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverSelectionBGViewController.swift; sourceTree = "<group>"; };
+		FA6B6E5D1A725AE700F1BB6D /* DriversPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriversPopoverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5CB25E1A4BD0B800C2C460 /* SwifteriOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +155,10 @@
 			children = (
 				FA1B77071A45D71E00407E4F /* AppDelegate.swift */,
 				FA1B77091A45D71E00407E4F /* ViewController.swift */,
+				FA6B6E5B1A71F59000F1BB6D /* DriverSelectionBGViewController.swift */,
+				FA6B6E5D1A725AE700F1BB6D /* DriversPopoverViewController.swift */,
 				FA1B770B1A45D71E00407E4F /* Main.storyboard */,
+				FA1B77291A45FBD000407E4F /* External */,
 				FA1B770E1A45D71E00407E4F /* Images.xcassets */,
 				FA1B77101A45D71E00407E4F /* LaunchScreen.xib */,
 				FA1B77051A45D71E00407E4F /* Supporting Files */,
@@ -90,6 +169,7 @@
 		FA1B77051A45D71E00407E4F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA5CB24C1A4BD0AD00C2C460 /* Swifter.xcodeproj */,
 				FA1B77061A45D71E00407E4F /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -112,6 +192,47 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FA1B77291A45FBD000407E4F /* External */ = {
+			isa = PBXGroup;
+			children = (
+				FA1B772A1A45FC0400407E4F /* ExternalViewController.swift */,
+				FA1B77271A45FBC900407E4F /* ExternalStoryboard.storyboard */,
+				FA559B251A83178200FCA76E /* GameTable */,
+				FA5CB2641A4C601200C2C460 /* TweetFeed */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		FA559B251A83178200FCA76E /* GameTable */ = {
+			isa = PBXGroup;
+			children = (
+				FA559B261A831A1800FCA76E /* GameTable.swift */,
+				FA559B1F1A83177B00FCA76E /* GameTableCell.swift */,
+			);
+			name = GameTable;
+			sourceTree = "<group>";
+		};
+		FA5CB24D1A4BD0AD00C2C460 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA5CB2551A4BD0AD00C2C460 /* SwifterDemoiOS.app */,
+				FA5CB2571A4BD0AD00C2C460 /* SwifteriOS.framework */,
+				FA5CB2591A4BD0AD00C2C460 /* SwifterMac.framework */,
+				FA5CB25B1A4BD0AD00C2C460 /* SwifterDemoMac.app */,
+				FA5CB25D1A4BD0AD00C2C460 /* SwifterDemoMacTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA5CB2641A4C601200C2C460 /* TweetFeed */ = {
+			isa = PBXGroup;
+			children = (
+				FA5CB2621A4BD12C00C2C460 /* TweetFeed.swift */,
+				FA1B77341A48B4F800407E4F /* TweetFeedCell.swift */,
+			);
+			name = TweetFeed;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +243,12 @@
 				FA1B76FE1A45D71E00407E4F /* Sources */,
 				FA1B76FF1A45D71E00407E4F /* Frameworks */,
 				FA1B77001A45D71E00407E4F /* Resources */,
+				FA5CB13B1A4A165200C2C460 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FA5CB2611A4BD0B800C2C460 /* PBXTargetDependency */,
 			);
 			name = PaddockClubPad;
 			productName = PaddockClubPad;
@@ -161,6 +284,7 @@
 				TargetAttributes = {
 					FA1B77011A45D71E00407E4F = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 96HG6E2WJ6;
 					};
 					FA1B77161A45D71E00407E4F = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -179,6 +303,12 @@
 			mainGroup = FA1B76F91A45D71E00407E4F;
 			productRefGroup = FA1B77031A45D71E00407E4F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FA5CB24D1A4BD0AD00C2C460 /* Products */;
+					ProjectRef = FA5CB24C1A4BD0AD00C2C460 /* Swifter.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FA1B77011A45D71E00407E4F /* PaddockClubPad */,
@@ -187,11 +317,50 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		FA5CB2551A4BD0AD00C2C460 /* SwifterDemoiOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SwifterDemoiOS.app;
+			remoteRef = FA5CB2541A4BD0AD00C2C460 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FA5CB2571A4BD0AD00C2C460 /* SwifteriOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwifteriOS.framework;
+			remoteRef = FA5CB2561A4BD0AD00C2C460 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FA5CB2591A4BD0AD00C2C460 /* SwifterMac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwifterMac.framework;
+			remoteRef = FA5CB2581A4BD0AD00C2C460 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FA5CB25B1A4BD0AD00C2C460 /* SwifterDemoMac.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SwifterDemoMac.app;
+			remoteRef = FA5CB25A1A4BD0AD00C2C460 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FA5CB25D1A4BD0AD00C2C460 /* SwifterDemoMacTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwifterDemoMacTests.xctest;
+			remoteRef = FA5CB25C1A4BD0AD00C2C460 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		FA1B77001A45D71E00407E4F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1B77281A45FBC900407E4F /* ExternalStoryboard.storyboard in Resources */,
 				FA1B770D1A45D71E00407E4F /* Main.storyboard in Resources */,
 				FA1B77121A45D71E00407E4F /* LaunchScreen.xib in Resources */,
 				FA1B770F1A45D71E00407E4F /* Images.xcassets in Resources */,
@@ -212,8 +381,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA559B201A83177B00FCA76E /* GameTableCell.swift in Sources */,
+				FA6B6E5C1A71F59000F1BB6D /* DriverSelectionBGViewController.swift in Sources */,
+				FA559B271A831A1800FCA76E /* GameTable.swift in Sources */,
+				FA6B6E5E1A725AE700F1BB6D /* DriversPopoverViewController.swift in Sources */,
+				FA1B772B1A45FC0400407E4F /* ExternalViewController.swift in Sources */,
 				FA1B770A1A45D71E00407E4F /* ViewController.swift in Sources */,
 				FA1B77081A45D71E00407E4F /* AppDelegate.swift in Sources */,
+				FA5CB2631A4BD12C00C2C460 /* TweetFeed.swift in Sources */,
+				FA1B77361A48B4F800407E4F /* TweetFeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +408,11 @@
 			isa = PBXTargetDependency;
 			target = FA1B77011A45D71E00407E4F /* PaddockClubPad */;
 			targetProxy = FA1B77181A45D71E00407E4F /* PBXContainerItemProxy */;
+		};
+		FA5CB2611A4BD0B800C2C460 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwifteriOS;
+			targetProxy = FA5CB2601A4BD0B800C2C460 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -338,6 +519,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = PaddockClubPad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,6 +531,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = PaddockClubPad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -407,6 +592,7 @@
 				FA1B77231A45D71E00407E4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA1B77241A45D71E00407E4F /* Build configuration list for PBXNativeTarget "PaddockClubPadTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +601,7 @@
 				FA1B77261A45D71E00407E4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

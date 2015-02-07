@@ -1,13 +1,519 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="NdZ-fe-Ol0">
+            <objects>
+                <viewController id="giN-VG-hSs" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mHd-7n-fav"/>
+                        <viewControllerLayoutGuide type="bottom" id="VDH-mF-ep3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uxv-uO-wob">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OCR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3U-p9-slx">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="381" y="128" width="38" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2B-Xe-FtW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Driver Selection">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="346" y="345" width="109" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="lnV-KE-pFa" kind="presentation" id="1SI-lp-tme"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="G3U-p9-slx"/>
+                                <exclude reference="P2B-Xe-FtW"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="G3U-p9-slx"/>
+                                <include reference="P2B-Xe-FtW"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KVo-gK-tSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216.75" y="188"/>
+        </scene>
+        <!--Drivers Popover View Controller-->
+        <scene sceneID="CkT-rM-6ee">
+            <objects>
+                <viewController storyboardIdentifier="driversPopover" id="8Jm-Is-0dE" customClass="DriversPopoverViewController" customModule="PaddockClubPad" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZiF-s5-qLP"/>
+                        <viewControllerLayoutGuide type="bottom" id="eD6-70-tyf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d7F-rM-7x1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chose your bet for: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyf-wM-9bY">
+                                <rect key="frame" x="16" y="15" width="153" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="za9-dV-0Ch">
+                                <rect key="frame" x="177" y="15" width="199" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3H-no-SPK">
+                                <rect key="frame" x="16" y="66" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Lewis Hamilton">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="e1a-zs-jHF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wr2-Em-VGm">
+                                <rect key="frame" x="16" y="124" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <string key="title" base64-UTF8="YES">
+S2ltaSBSFWFpa2tvbmVuDw8
+</string>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="AiG-mm-0Jx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvW-Lv-YXt">
+                                <rect key="frame" x="16" y="182" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Fernando Alonso">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="tCm-qV-yjk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhG-sA-DDh">
+                                <rect key="frame" x="16" y="240" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Felipe Massa">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="Vqh-sc-EPM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJe-Qn-Cb8">
+                                <rect key="frame" x="16" y="298" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Daniel Ricciardo">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="Vcz-xe-ltY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KnV-Ok-7of">
+                                <rect key="frame" x="16" y="356" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Carlos Sainz Jr.">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="5Gi-AW-wRG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKO-kA-bX9">
+                                <rect key="frame" x="16" y="414" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Nico Hulkenberg">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="XvN-HK-0Pn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWQ-OJ-nHP">
+                                <rect key="frame" x="16" y="472" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Romain Grosjean">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="8va-ic-JS2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0Y-zG-foo">
+                                <rect key="frame" x="16" y="530" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Marcus Ericsson">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="WDb-pK-AVB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Du6-rZ-aE3">
+                                <rect key="frame" x="304" y="66" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Nico Rosberg">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="dFP-jA-SZj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrc-lv-gFh">
+                                <rect key="frame" x="304" y="124" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sebastian Vettel">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="4m1-2C-MQn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Bj-Hx-cS2">
+                                <rect key="frame" x="304" y="182" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Jenson Button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="v8C-Jt-bo6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czb-XL-nhj">
+                                <rect key="frame" x="304" y="240" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Valtteri Bottas">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="ncm-7K-i3N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpA-ep-BTl">
+                                <rect key="frame" x="304" y="298" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Daniil Kvyat">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="kiI-nu-mTn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gew-hr-s4F">
+                                <rect key="frame" x="304" y="356" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Max Verstappen">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="Q0P-oH-tyl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xbz-Na-1qN">
+                                <rect key="frame" x="304" y="414" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sergio Perez">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="yOs-BN-B61"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uO-YK-ne1">
+                                <rect key="frame" x="304" y="472" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Pastor Maldonado">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="w41-Q6-eS4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fon-dU-7od">
+                                <rect key="frame" x="304" y="530" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Felipe Nasr">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="driverSelected:" destination="8Jm-Is-0dE" eventType="touchUpInside" id="KrJ-11-p6M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="placeLabel" destination="za9-dV-0Ch" id="Iwc-92-m2j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mNM-jd-Y99" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1589" y="188"/>
+        </scene>
+        <!--Driver SelectionBG View Controller-->
+        <scene sceneID="PiG-YY-OjD">
+            <objects>
+                <viewController id="lnV-KE-pFa" customClass="DriverSelectionBGViewController" customModule="PaddockClubPad" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wSK-KW-GF3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mrb-Ae-RRN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="45I-83-fit">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMQ-et-cu3">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="747" y="550" width="37" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="done:" destination="lnV-KE-pFa" eventType="touchUpInside" id="T7p-aM-WEg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHb-qm-AjD">
+                                <rect key="frame" x="16" y="20" width="205" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="4rL-20-peT"/>
+                                    <constraint firstAttribute="height" constant="34" id="DIe-rd-OpF"/>
+                                </constraints>
+                                <state key="normal" title="Winner">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toDriversSelectionPopover:" destination="lnV-KE-pFa" eventType="touchUpInside" id="fX6-jb-ejO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vey-gD-SuP">
+                                <rect key="frame" x="16" y="62" width="205" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="4rI-sd-Ciw"/>
+                                    <constraint firstAttribute="width" constant="205" id="YQZ-Cg-Tqg"/>
+                                </constraints>
+                                <state key="normal" title="2nd">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toDriversSelectionPopover:" destination="lnV-KE-pFa" eventType="touchUpInside" id="1H2-ZM-CC9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fe2-fO-heE">
+                                <rect key="frame" x="16" y="104" width="205" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="MqC-Fq-EyI"/>
+                                    <constraint firstAttribute="width" constant="205" id="gSA-uu-tBX"/>
+                                </constraints>
+                                <state key="normal" title="3rd">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toDriversSelectionPopover:" destination="lnV-KE-pFa" eventType="touchUpInside" id="FBw-Ld-zoN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xlr-7e-E74">
+                                <rect key="frame" x="16" y="146" width="205" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="C6Q-1a-mZ7"/>
+                                    <constraint firstAttribute="width" constant="205" id="lDy-lt-SRi"/>
+                                </constraints>
+                                <state key="normal" title="4th">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toDriversSelectionPopover:" destination="lnV-KE-pFa" eventType="touchUpInside" id="SHj-rw-9Sp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRL-DY-ONK">
+                                <rect key="frame" x="16" y="188" width="205" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="EiC-VH-Ogz"/>
+                                    <constraint firstAttribute="height" constant="34" id="MGK-hx-jyQ"/>
+                                </constraints>
+                                <state key="normal" title="5th">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toDriversSelectionPopover:" destination="lnV-KE-pFa" eventType="touchUpInside" id="WjM-wM-pRv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogI-rg-JaH">
+                                <rect key="frame" x="16" y="230" width="205" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="FKi-Rm-TDy"/>
+                                    <constraint firstAttribute="height" constant="34" id="LOz-Hl-3HP"/>
+                                </constraints>
+                                <state key="normal" title="6th">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toDriversSelectionPopover:" destination="lnV-KE-pFa" eventType="touchUpInside" id="ql5-7A-fyP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9f-86-kRf">
+                                <rect key="frame" x="16" y="272" width="205" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="oUb-OQ-LP4"/>
+                                    <constraint firstAttribute="height" constant="34" id="yoB-Fd-TTB"/>
+                                </constraints>
+                                <state key="normal" title="7th">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toDriversSelectionPopover:" destination="lnV-KE-pFa" eventType="touchUpInside" id="1P2-JH-I8p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBq-Xe-fyS">
+                                <rect key="frame" x="16" y="314" width="205" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="RDA-Kk-owS"/>
+                                    <constraint firstAttribute="width" constant="205" id="cZ9-xU-UHY"/>
+                                </constraints>
+                                <state key="normal" title="8th">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toDriversSelectionPopover:" destination="lnV-KE-pFa" eventType="touchUpInside" id="qzi-wX-mij"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BuA-Ma-ZW0">
+                                <rect key="frame" x="16" y="356" width="205" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="ApY-mx-iYG"/>
+                                    <constraint firstAttribute="height" constant="34" id="R7g-TP-ugE"/>
+                                </constraints>
+                                <state key="normal" title="9th">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toDriversSelectionPopover:" destination="lnV-KE-pFa" eventType="touchUpInside" id="9RI-MY-h5J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoH-1W-D3h">
+                                <rect key="frame" x="16" y="398" width="205" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="2w5-hW-Rrs"/>
+                                    <constraint firstAttribute="width" constant="205" id="hoM-Mh-9ML"/>
+                                </constraints>
+                                <state key="normal" title="10th">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toDriversSelectionPopover:" destination="lnV-KE-pFa" eventType="touchUpInside" id="QKy-AD-mAK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xBq-Xe-fyS" firstAttribute="leading" secondItem="45I-83-fit" secondAttribute="leadingMargin" id="2qz-sh-UT4"/>
+                            <constraint firstItem="lRL-DY-ONK" firstAttribute="leading" secondItem="45I-83-fit" secondAttribute="leadingMargin" id="6hf-o8-6Xt"/>
+                            <constraint firstItem="CoH-1W-D3h" firstAttribute="top" secondItem="BuA-Ma-ZW0" secondAttribute="bottom" constant="8" id="6rQ-Zb-1h4"/>
+                            <constraint firstItem="G9f-86-kRf" firstAttribute="leading" secondItem="45I-83-fit" secondAttribute="leadingMargin" id="713-Ri-yOX"/>
+                            <constraint firstItem="BuA-Ma-ZW0" firstAttribute="top" secondItem="xBq-Xe-fyS" secondAttribute="bottom" constant="8" id="8do-WQ-s6N"/>
+                            <constraint firstItem="lRL-DY-ONK" firstAttribute="top" secondItem="Xlr-7e-E74" secondAttribute="bottom" constant="8" id="93X-Tg-PQJ"/>
+                            <constraint firstItem="xBq-Xe-fyS" firstAttribute="top" secondItem="G9f-86-kRf" secondAttribute="bottom" constant="8" id="D0l-ox-86b"/>
+                            <constraint firstItem="BuA-Ma-ZW0" firstAttribute="leading" secondItem="45I-83-fit" secondAttribute="leadingMargin" id="FrK-rf-iu0"/>
+                            <constraint firstItem="Xlr-7e-E74" firstAttribute="top" secondItem="fe2-fO-heE" secondAttribute="bottom" constant="8" id="H5O-BY-1eu"/>
+                            <constraint firstItem="ogI-rg-JaH" firstAttribute="leading" secondItem="45I-83-fit" secondAttribute="leadingMargin" id="JH6-h8-tpK"/>
+                            <constraint firstItem="G9f-86-kRf" firstAttribute="top" secondItem="ogI-rg-JaH" secondAttribute="bottom" constant="8" id="JHz-F5-tdn"/>
+                            <constraint firstItem="fe2-fO-heE" firstAttribute="top" secondItem="vey-gD-SuP" secondAttribute="bottom" constant="8" id="QPN-53-fS4"/>
+                            <constraint firstItem="sHb-qm-AjD" firstAttribute="leading" secondItem="45I-83-fit" secondAttribute="leadingMargin" id="Uel-gh-MI2"/>
+                            <constraint firstItem="vey-gD-SuP" firstAttribute="top" secondItem="sHb-qm-AjD" secondAttribute="bottom" constant="8" id="g6d-Mc-qlM"/>
+                            <constraint firstItem="Xlr-7e-E74" firstAttribute="leading" secondItem="45I-83-fit" secondAttribute="leadingMargin" id="i1d-58-E3C"/>
+                            <constraint firstItem="vey-gD-SuP" firstAttribute="leading" secondItem="45I-83-fit" secondAttribute="leadingMargin" id="orT-Ix-sWP"/>
+                            <constraint firstItem="fe2-fO-heE" firstAttribute="leading" secondItem="45I-83-fit" secondAttribute="leadingMargin" id="t4a-gq-VLD"/>
+                            <constraint firstItem="sHb-qm-AjD" firstAttribute="top" secondItem="wSK-KW-GF3" secondAttribute="bottom" id="vS4-vk-Xgh"/>
+                            <constraint firstItem="CoH-1W-D3h" firstAttribute="leading" secondItem="45I-83-fit" secondAttribute="leadingMargin" id="wgJ-iw-tdR"/>
+                            <constraint firstItem="ogI-rg-JaH" firstAttribute="top" secondItem="lRL-DY-ONK" secondAttribute="bottom" constant="8" id="zsM-1j-dE0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="lMQ-et-cu3"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="lMQ-et-cu3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outletCollection property="placementSelectionButtons" destination="sHb-qm-AjD" collectionClass="NSMutableArray" id="jAu-Jx-yui"/>
+                        <outletCollection property="placementSelectionButtons" destination="vey-gD-SuP" collectionClass="NSMutableArray" id="5yL-9Z-hB5"/>
+                        <outletCollection property="placementSelectionButtons" destination="fe2-fO-heE" collectionClass="NSMutableArray" id="F3G-dz-ILe"/>
+                        <outletCollection property="placementSelectionButtons" destination="Xlr-7e-E74" collectionClass="NSMutableArray" id="kVb-PI-ocB"/>
+                        <outletCollection property="placementSelectionButtons" destination="lRL-DY-ONK" collectionClass="NSMutableArray" id="mwZ-DH-KUn"/>
+                        <outletCollection property="placementSelectionButtons" destination="ogI-rg-JaH" collectionClass="NSMutableArray" id="n79-VG-JE0"/>
+                        <outletCollection property="placementSelectionButtons" destination="G9f-86-kRf" collectionClass="NSMutableArray" id="FjG-YC-wek"/>
+                        <outletCollection property="placementSelectionButtons" destination="xBq-Xe-fyS" collectionClass="NSMutableArray" id="ux3-oo-HO4"/>
+                        <outletCollection property="placementSelectionButtons" destination="BuA-Ma-ZW0" collectionClass="NSMutableArray" id="zeZ-46-2wT"/>
+                        <outletCollection property="placementSelectionButtons" destination="CoH-1W-D3h" collectionClass="NSMutableArray" id="IK6-Si-kCO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vrO-0Q-WGr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879" y="188"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="PaddockClubPad" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +521,36 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iK-PY-cX0">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Betting Game">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="353" y="20" width="95" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="giN-VG-hSs" kind="presentation" id="HyZ-bI-E62"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="8iK-PY-cX0"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="8iK-PY-cX0"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-483" y="188"/>
         </scene>
     </scenes>
 </document>
