@@ -19,11 +19,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         if UIScreen.screens().count > 1 {
-            externalScreenRecognized()
+            enableExternalScreen()
         }
     }
     
-    func externalScreenRecognized() {
+    func enableExternalScreen() {
         let screens: [AnyObject] = UIScreen.screens()
         
         externalScreen = (screens[1] as UIScreen)

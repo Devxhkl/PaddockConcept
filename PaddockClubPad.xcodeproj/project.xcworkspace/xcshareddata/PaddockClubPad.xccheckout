@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5FC9BC7F-0474-4930-A69C-F834985F8705</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PaddockClubPad</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CFD78DFE1F3A24AC18CC102185C5006E1D37F9DE</key>
+		<string>https://github.com/Devxhkl/PaddockConcept.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PaddockClubPad.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CFD78DFE1F3A24AC18CC102185C5006E1D37F9DE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Devxhkl/PaddockConcept.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CFD78DFE1F3A24AC18CC102185C5006E1D37F9DE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CFD78DFE1F3A24AC18CC102185C5006E1D37F9DE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PaddockConcept</string>
+		</dict>
+	</array>
+</dict>
+</plist>

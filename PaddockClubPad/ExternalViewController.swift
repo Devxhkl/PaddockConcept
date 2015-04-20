@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import TwitterKit
+
 
 let mySpecialNotificationKey = "com.disobeythesystem.specialNotificationKey"
 
@@ -37,6 +39,13 @@ class ExternalViewController: UIViewController, UITableViewDataSource, UITableVi
         tweetFeedTable.reloadData()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "imageDownloaded", name: mySpecialNotificationKey, object: nil)
+        
+        Twitter.sharedInstance().logInGuestWithCompletion { (session: TWTRGuestSession!, error: NSError!) in
+            Twitter.sharedInstance().APIClient.loadTweetWithID("20") { (tweet: TWTRTweet!, error: NSError!) in
+                self.view.addSubview(TWTRTweetView(tweet: tweet))
+            }
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +58,7 @@ class ExternalViewController: UIViewController, UITableViewDataSource, UITableVi
         
         if tableView == tweetFeedTable {
             
-            num = tweets.count
+            num = 0
             
         } else {
             
@@ -62,30 +71,7 @@ class ExternalViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
-        var imageHeight: CGFloat = 0.0
-        
-        if tableView == tweetFeedTable {
-            
-            if var image = tweetImages[indexPath.row] as UIImage! {
-                let placeholderSize = CGSize(width: 297.0, height: 10.0)
-                if image.size == placeholderSize {
-                    
-                    imageHeight = 44.0
-                    
-                } else {
-                    
-                    imageHeight = image.size.height + 44.0
-                }
-            }
-
-        } else {
-            
-            imageHeight = 40.0
-            
-        }
-        
-        return imageHeight
-        
+        return 40.0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -93,36 +79,7 @@ class ExternalViewController: UIViewController, UITableViewDataSource, UITableVi
         if tableView == tweetFeedTable {
             var cell = tableView.dequeueReusableCellWithIdentifier("tweetCell", forIndexPath: indexPath) as TweetFeedCell
             
-            cell.nameLabel?.text = tweets[indexPath.row]["user"]["name"].string
-            
-            let rawDateString = tweets[indexPath.row]["created_at"].string
-            let stringArray : [String] = rawDateString!.componentsSeparatedByString(" ")
-            cell.dateLabel?.text = ("\(stringArray[3]), \(stringArray[1]) \(stringArray[2]) \(stringArray[5])")
-            
-            cell.descriptionLabel?.text = tweets[indexPath.row]["text"].string
-            
-            if tweetImages.count > 0 {
-                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) {
-                    let finalImage: UIImage = tweetImages[indexPath.row]
-                    //println(finalImage.size)
-                    
-                    if finalImage.size == CGSize(width: 297.0, height: 10.0) {
-                        cell.mediaImage.image = nil
-                        cell.mediaImage.frame = CGRect(x: 0.0, y: 0.0, width: 0.0, height: 0.0)
-                        cell.mediaImage.hidden = true
                         
-                    } else {
-                        dispatch_async(dispatch_get_main_queue()) {
-                            cell.mediaImage.image = finalImage
-                            if !self.imageIsIn {
-                                NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: self)
-                                self.imageIsIn = true
-                            }
-                        }
-                    }
-                }
-            }
-            
             return cell
 
         } else {
